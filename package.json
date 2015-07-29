@@ -1,0 +1,31 @@
+{
+    "name": "react-simple-isomorphic",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "alt": "^0.13.7",
+        "babelify": "^5.0.3",
+        "browserify": "^6.0.3",
+        "react": "^0.12.2",
+        "node-jsx": "0.13.3",
+        "express-handlebars": "2.0.1",
+        "express": "4.13.1"
+    },
+    "engines": {
+        "node": ">=0.10.1 <0.10.33"
+    },
+    "devDependencies": {
+        "grunt-contrib-clean": "^0.6.0",
+        "grunt-mkdir": "^0.1.2"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whitehorse5353/react-simple-isomorphic.git"
+    },
+    "author": "",
+    "license": "ISC"
+}
