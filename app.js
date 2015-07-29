@@ -12,18 +12,18 @@ app.set('view engine', 'hbs');
 
 browserify({debug: true})
     .transform(babelify)
-    .require("./components/flux-component/scripts/entry.js", {entry: true})
+    .require("./client/main.js", {entry: true})
     .bundle()
     .on("error", function (err) {
         console.log("Error : " + err.message);
     })
-    .pipe(fs.createWriteStream("./server/bundle.js"));
+    .pipe(fs.createWriteStream("./build/bundle.js"));
 
 app.get('/', function (req, res) {
-    var BaseComponent = require('./components/flux-component/scripts/mainServer').View,
+    var BaseComponent = require('./public/baseComponent').View,
         componentString = React.renderToString(React.createElement(BaseComponent));
     res.render('component', {tplStr: componentString});
-    app.use(express.static(__dirname + '/server'));
+    app.use(express.static(__dirname + '/build'));
 });
 app.listen(3000);
 console.log('server listening to port 3000');

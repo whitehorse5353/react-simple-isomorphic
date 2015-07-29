@@ -1,3 +1,3 @@
 var React = require('react');
-var View = require('./mainServer').View;
+var View = require('./../public/baseComponent').View;
 React.render(<View />, document.getElementById('my-componenet'));
