@@ -17,13 +17,10 @@ module.exports.View = React.createClass({
         }
     },
     render: function () {
-        var self = this;
-        var list = self.state.params.map(function (item) {
+        var list = this.state.params.map(function (item) {
             return <li>{item}</li>
         });
-        return <div>
-            <ul>{list}</ul>
-            <FormComponent handleFormSubmit={this.handleFormSubmit}/></div>
+        return <div><ul>{list}</ul><FormComponent handleFormSubmit={this.handleFormSubmit}/></div>
     },
     handleFormSubmit: function (val) {
         this.state.params.push(val);
